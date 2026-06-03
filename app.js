@@ -16,7 +16,11 @@ function addTask(){
 
     localStorage.setItem("tasks",JSON.stringify(tasks))
 }
-
+document.addEventListener("keydown",function(event){
+        if(event.key === "Enter"){
+            addTask()
+        }
+})
 function renderTasks(){
     list = document.getElementById("taskList");
     list.innerHTML = "";
