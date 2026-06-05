@@ -1,10 +1,11 @@
  body {
+    min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(135deg,#0f172a,#1e293b);
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 h1{
@@ -16,6 +17,10 @@ h1{
 
     padding: 25px;
     border-radius: 15px;
+
+    width: 100%;
+    max-width: 400px;
+
 
     backdrop-filter: blur(10px);
 
@@ -32,14 +37,22 @@ input{
 
     font-size: 16px;
 }
+
 li {
      list-style: none;
 color: white;
-    /* background: rgba(255,255,255,0.1); */
+    background: rgba(255,255,255,0.1);
     padding: 15px;
     margin-top: 10px;
+    word-break: break-word;
+
 }
 
+#taskList{
+    width: 100%;
+    max-width: 500px;
+    padding: 0;
+}
 
 button{
     padding: 12px 20px;
@@ -61,4 +74,39 @@ button{
 button:hover{
     background: #0ea5e9;
     transform: scale(1.05);
+}
+
+@media (max-width: 600px){
+
+    body{
+        padding: 15px;
+    }
+
+    h1{
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .input-area{
+        width: 100%;
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    #taskInput{
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+
+    #add-btn{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #taskList{
+        width: 100%;
+    }
 }
